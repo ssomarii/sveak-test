@@ -1,0 +1,19 @@
+@use '../../constants/colors';
+
+.mainPage {
+ background-color: colors.$DESKTOP_BACKGROUND;
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+
+ &__container {
+    height: 100vh;
+    display: flex;
+ }
+
+ &__content {
+
+ }
+}
