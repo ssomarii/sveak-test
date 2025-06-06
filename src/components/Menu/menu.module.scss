@@ -1,0 +1,10 @@
+@use '../../constants/colors.scss';
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1px;
+    background-color: rgba(colors.$DESKTOP_BACKGROUND, 0.4);
+    padding: 39px 26px 29px 36px;
+    border-right: 1px gray solid;
+}
