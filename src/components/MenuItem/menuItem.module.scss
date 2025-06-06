@@ -1,0 +1,18 @@
+@use '../../constants/colors.scss';
+
+.menuItem {
+    padding: 9px 13px;
+    border-radius: 30px;
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    background-color: transparent;
+    
+    &:hover {
+        background-color: rgba(colors.$DESKTOP_HOVER, 0.15);
+        cursor: pointer;
+    }
+
+    &__title {
+        color: black;
+    }
+}
