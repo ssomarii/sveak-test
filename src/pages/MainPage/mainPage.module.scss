@@ -1,19 +1,41 @@
 @use '../../constants/colors';
+@use '../../constants/mixins';
 
 .mainPage {
- background-color: colors.$DESKTOP_BACKGROUND;
  width: 100vw;
  height: 100vh;
  display: flex;
  flex-direction: column;
- justify-content: space-between;
 
- &__container {
-    height: 100vh;
-    display: flex;
- }
+   &__fullContent {
+      width: 100vw;
+   }
 
- &__content {
+   &__container {
+      display: flex;
+      flex: 1 0 auto;
+      background-color: colors.$DESKTOP_BACKGROUND;
+   }
 
- }
+   &__content {
+      padding: 20px;
+      column-gap: 21px;
+      row-gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+
+      @include mixins.laptop {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+
+   &__menuWrapper {
+      @include mixins.laptop {
+         display: none;
+      }
+
+      @include mixins.mobile {
+         display: none;
+      }
+   }
 }
