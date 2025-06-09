@@ -1,4 +1,6 @@
-export const CARDS_MOCK = [
+import type { TMenuItem, TCardItem } from "../types"
+
+export const CARDS_MOCK: TCardItem[] = [
     {
         id: 1,
         title: 'Card 1',
@@ -46,5 +48,28 @@ export const CARDS_MOCK = [
     {
         id: 12,
         title: 'Card 12',
+    },
+]
+
+export const MENU_ITEMS_MOCK: TMenuItem[] = [
+    {
+        id: 1,
+        title: '1 пункт меню',
+    },
+    {
+        id: 2,
+        title: '2 пункт меню',
+    },
+    {
+        id: 3,
+        title: '3 пункт меню',
+    },
+    {
+        id: 4,
+        title: '4 пункт меню',
+    },
+    {
+        id: 5,
+        title: '5 пункт меню',
     },
 ]
