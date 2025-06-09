@@ -1,3 +1,16 @@
+@use '../../constants/colors';
+@use '../../constants/mixins';
+
 .footer {
-    background-color: brown;
+    background-color: colors.$DESKTOP_BACKGROUND;
+    padding: 11px 25px;
+    border-top: 1px gray solid;
+
+    @include mixins.laptop {
+      background-color: colors.$TABLET_BACKGROUND;
+    }
+
+    @include mixins.mobile {
+      background-color: colors.$MOBILE_BACKGROUND;
+    }
 }
