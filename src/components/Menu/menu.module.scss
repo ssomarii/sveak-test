@@ -1,6 +1,7 @@
 @use '../../constants/colors.scss';
 
 .menu {
+    width: 310px;
     display: flex;
     flex-direction: column;
     row-gap: 1px;
