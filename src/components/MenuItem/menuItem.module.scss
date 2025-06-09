@@ -6,6 +6,9 @@
     transition-property: background-color;
     transition-duration: 0.3s;
     background-color: transparent;
+    gap: 4px;
+    display: flex;
+    align-items: center;
     
     &:hover {
         background-color: rgba(colors.$DESKTOP_HOVER, 0.15);
