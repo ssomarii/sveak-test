@@ -1,0 +1,45 @@
+@use '../../constants/mixins';
+
+.burgerButton {
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+    z-index: 999;
+
+    &__burgerButtonItem {
+        width: 24px;
+        height: 5px;
+        background-color: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    &:hover {
+        .burgerButton__burgerButtonItem {
+            background-color: palevioletred;
+            transition: ease 0.2s;
+        }
+    }
+
+    &_active {
+        .burgerButton__burgerButtonItem:nth-child(1) {
+            transform: translate3d(0, 8px, 0) rotate(45deg);
+        }
+
+        .burgerButton__burgerButtonItem:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burgerButton__burgerButtonItem:nth-child(3) {
+            transform: translate3d(0, -8px, 0) rotate(-45deg);
+        }
+    }
+
+    @include mixins.tablet {
+        display: flex;
+    }
+
+    @include mixins.mobile {
+        display: flex;
+    }
+}
