@@ -43,7 +43,7 @@
 
          @include mixins.mobile {
             visibility: visible;
-            background-color: transparent; 
+            transition: visibility 0.3s ease-in-out;  
          }
     }
 }
