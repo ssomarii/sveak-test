@@ -6,4 +6,5 @@ export type TMenuItem = {
 export type TCardItem = {
     id: number;
     title: string;
+    image: string;
 }
