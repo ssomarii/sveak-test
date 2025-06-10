@@ -1,9 +1,17 @@
 import styles from './header.module.scss';
 import UserAvatar from '../../assets/images/userImage.jpg';
+import { BurgerButton } from '../BurgerButon';
 
-export const Header = () => {
+interface IProps {
+    isActiveMenu: boolean;
+    onClickButtonMenu(): void;
+}
+
+export const Header = ({isActiveMenu = false, onClickButtonMenu = () => {}}: IProps) => {
+
     return(
         <div className={styles.header}>
+            <BurgerButton isActive={isActiveMenu} onClickButton={onClickButtonMenu} />
             <span>Header</span>
             <div>
                 <div className={styles.header__avatarWrap}>
