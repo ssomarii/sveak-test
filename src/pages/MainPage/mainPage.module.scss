@@ -24,7 +24,11 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 
-      @include mixins.laptop {
+      @include mixins.tablet {
+         grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include mixins.mobile {
          grid-template-columns: repeat(2, 1fr);
       }
    }
