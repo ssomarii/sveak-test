@@ -30,7 +30,7 @@
    }
 
    &__menuWrapper {
-      @include mixins.laptop {
+      @include mixins.tablet {
          display: none;
       }
 

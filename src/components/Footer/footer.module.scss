@@ -6,7 +6,7 @@
     padding: 11px 25px;
     border-top: 1px gray solid;
 
-    @include mixins.laptop {
+    @include mixins.tablet {
       background-color: colors.$TABLET_BACKGROUND;
     }
 
