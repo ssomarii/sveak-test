@@ -1,0 +1,49 @@
+@use '../../constants/colors';
+@use '../../constants/mixins';
+
+.menuAdaptive {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    transition: visibility 0.3s ease-in-out;
+
+    &__menu {
+       background-color: colors.$TABLET_BACKGROUND;
+       display: flex;
+       flex-direction: column;
+       width: 260px;
+       height: 100%;
+       padding-top: 60px;
+       transform: translate(-100%);
+       transition: transform 0.3s ease-in-out;
+
+       &_active {
+        @include mixins.tablet {
+            transform: translate(0);
+            transition: transform 0.3s ease-in-out;           
+         }
+
+         @include mixins.mobile {
+            width: 100%;
+            transform: translate(0);
+            transition: transform 0.3s ease-in-out;   
+         }
+       }
+    }
+
+    &_active {
+        @include mixins.tablet {
+            visibility: visible;
+            transition: visibility 0.3s ease-in-out;           
+         }
+
+         @include mixins.mobile {
+            visibility: visible;
+            background-color: transparent; 
+         }
+    }
+}
