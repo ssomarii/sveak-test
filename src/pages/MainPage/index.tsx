@@ -22,7 +22,7 @@ export const MainPage = () => {
                 <div className={styles.mainPage__fullContent}>
                     <Header isActiveMenu={isActiveMenu} onClickButtonMenu={_onClickButtonMenu} />
                     <div className={styles.mainPage__content}>
-                        {CARDS_MOCK.map(item => <Card key={item.id} title={item.title} />)}
+                        {CARDS_MOCK.map(item => <Card key={item.id} title={item.title} image={item.image} />)}
                     </div>
                 </div>
             </div>
