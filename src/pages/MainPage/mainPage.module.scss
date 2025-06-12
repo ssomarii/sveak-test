@@ -33,6 +33,25 @@
       }
    }
 
+   &__contentItem {
+      //Способ через расчёт дочерних элементов, котоырым необходим эффект
+      //Работает хорошо, если знать точное кол-во колонок и не использовать динамический грид
+      //
+      // $columns: 5;
+      // $first-child-in-any-row: ":nth-child(#{$columns}n + 1)";
+      // $any-child-in-the-last-row: ":nth-last-child(-n + #{$columns})";
+      // $first-child-in-last-row: "&#{$first-child-in-any-row}#{$any-child-in-the-last-row}";
+
+      // #{$first-child-in-last-row}, 
+      // #{$first-child-in-last-row} ~ & {
+      //    box-shadow: 0 0 0 .33rem blue;
+      // }
+
+      //Выделение цветом элементов незаконченной строки для наглядности
+      box-shadow: 0 0 0 .33rem var(--colorProp);
+      //display: var(--colorProp);
+   }
+
    &__menuWrapper {
       @include mixins.tablet {
          display: none;
