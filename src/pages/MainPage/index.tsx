@@ -4,6 +4,7 @@ import { Header } from '../../components/Header';
 import { Menu } from '../../components/Menu';
 import { MenuAdaptive } from '../../components/MenuAdaptive';
 import { CARDS_MOCK, MENU_ITEMS_MOCK } from '../../constants/mocks';
+import { hideRedundantCards } from '../../helpers/hideRedundantCards';
 import styles from './mainPage.module.scss';
 import { useEffect, useState } from 'react';
 
@@ -13,33 +14,13 @@ export const MainPage = () => {
     function _onClickButtonMenu() {
         setIsActiveMenu(!isActiveMenu);
     }
-    
-    
-    function hideCards() {
-        const gridContainer = document.querySelector('[data-grid-container]');
-        const gridStyles = getComputedStyle(gridContainer!);
-        const columnsCount = gridStyles.gridTemplateColumns.split(' ').length;
-        
-        let redundantCardsCount = CARDS_MOCK.length % columnsCount;
-        let allItems = Array.from(document.querySelectorAll('[data-grid-card]'));     
-        let redundantCards = allItems.slice(CARDS_MOCK.length - redundantCardsCount)
-
-        allItems.forEach((el: any) => {
-            el.style.removeProperty('--colorProp');
-        })
-
-        redundantCards.forEach((el: any) => {
-            el.style.setProperty('--colorProp', 'blue');
-            document.documentElement.style.setProperty('--columnCountProp', String(columnsCount));
-        })
-    }
 
     useEffect(() => {
-        hideCards(); 
-        window.addEventListener('resize', hideCards);
+        hideRedundantCards(CARDS_MOCK); 
+        window.addEventListener('resize', () => hideRedundantCards(CARDS_MOCK));
         
         return () => {
-            window.removeEventListener('resize', hideCards);
+            window.removeEventListener('resize', () => hideRedundantCards(CARDS_MOCK));
         };
     }, []);
     
