@@ -14,12 +14,12 @@
         transition: all 0.3s ease;
     }
 
-    &:hover {
-        .burgerButton__burgerButtonItem {
-            background-color: palevioletred;
-            transition: ease 0.2s;
-        }
-    }
+    // &:hover {
+    //     .burgerButton__burgerButtonItem {
+    //         background-color: palevioletred;
+    //         transition: ease 0.2s;
+    //     }
+    // }
 
     &_active {
         .burgerButton__burgerButtonItem:nth-child(1) {
