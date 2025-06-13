@@ -1,10 +1,19 @@
 @use '../../constants/colors';
 @use '../../constants/mixins';
+@use '../../constants/fonts';
 
 .footer {
     background-color: colors.$DESKTOP_BACKGROUND;
     padding: 11px 25px;
     border-top: 1px gray solid;
+
+    &__title {
+      @include mixins.main-font-title;
+    }
+
+    &__description {
+      @include mixins.main-font-subtitle;
+    }
 
     @include mixins.tablet {
       background-color: colors.$TABLET_BACKGROUND;
