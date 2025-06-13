@@ -16,6 +16,7 @@ export const MainPage = () => {
     
     
     function hideCards() {
+        //
         const gridContainer = document.querySelector('[data-grid-container]');
         const gridStyles = getComputedStyle(gridContainer!);
         const columnsCount = gridStyles.gridTemplateColumns.split(' ').length;
@@ -34,12 +35,13 @@ export const MainPage = () => {
         })
     }
 
-    window.addEventListener('resize', () => {
-        hideCards();
-    })
-
     useEffect(() => {
-        hideCards();
+        hideCards(); 
+        window.addEventListener('resize', hideCards);
+        
+        return () => {
+            window.removeEventListener('resize', hideCards);
+        };
     }, []);
     
     return(
