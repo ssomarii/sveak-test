@@ -9,9 +9,9 @@ export const MenuItem = ({title = ''}: IProps) => {
     return(
         <div className={styles.menuItem}>
             <img src={DeerImage} alt="deer" width="20" height="20" />
-            <span className={styles.menuItem__title}>
+            <h3 className={styles.menuItem__title}>
                 {title}
-            </span>
+            </h3>
         </div>
     )
 }

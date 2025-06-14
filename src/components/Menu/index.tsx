@@ -9,8 +9,8 @@ interface IProps {
 
 export const Menu = ({stylesWrap = '', listItems = []}: IProps) => {
     return(
-        <div className={`${styles.menu} ${stylesWrap}`}>
+        <nav className={`${styles.menu} ${stylesWrap}`}>
             {listItems.map(item => <MenuItem key={item.id} title={item.title} />)}
-        </div>
+        </nav>
     )
 }

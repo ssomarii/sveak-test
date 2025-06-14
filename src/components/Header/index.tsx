@@ -10,14 +10,14 @@ interface IProps {
 export const Header = ({isActiveMenu = false, onClickButtonMenu = () => {}}: IProps) => {
 
     return(
-        <div className={styles.header}>
+        <header className={styles.header}>
             <BurgerButton isActive={isActiveMenu} onClickButton={onClickButtonMenu} />
-            <span>Header</span>
+            <h1>Header</h1>
             <div>
                 <div className={styles.header__avatarWrap}>
                     <img className={styles.header__avatar} src={UserAvatar} />
                 </div>
             </div>
-        </div>
+        </header>
     )
 }

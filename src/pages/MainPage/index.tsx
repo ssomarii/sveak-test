@@ -31,9 +31,9 @@ export const MainPage = () => {
                 <Menu listItems={MENU_ITEMS_MOCK} stylesWrap={styles.mainPage__menuWrapper} />
                 <div className={styles.mainPage__fullContent}>
                     <Header isActiveMenu={isActiveMenu} onClickButtonMenu={_onClickButtonMenu} />
-                    <div data-grid-container className={styles.mainPage__content}>
+                    <main data-grid-container className={styles.mainPage__content}>
                         {CARDS_MOCK.map(item => <Card stylesWrap={styles.mainPage__contentItem} key={item.id} title={item.title} image={item.image} />)}
-                    </div>
+                    </main>
                 </div>
             </div>
             <Footer />
