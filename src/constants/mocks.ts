@@ -94,7 +94,7 @@ export const MENU_ITEMS_MOCK: TMenuItem[] = [
     },
     {
         id: 2,
-        title: '2 пункт меню',
+        title: '2 пункт меню с длинным названием',
     },
     {
         id: 3,
