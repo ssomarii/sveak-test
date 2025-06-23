@@ -1,20 +1,13 @@
 import styles from './header.module.scss';
 import UserAvatar from '../../assets/images/userImage.png';
-import { BurgerButton } from '../BurgerButon';
 
-interface IProps {
-    isActiveMenu: boolean;
-    onClickButtonMenu(): void;
-}
+export const Header = () => {
 
-export const Header = ({isActiveMenu = false, onClickButtonMenu = () => {}}: IProps) => {
-
-    return(
+    return (
         <header className={styles.header}>
-            <BurgerButton isActive={isActiveMenu} onClickButton={onClickButtonMenu} />
-            <h1>Header</h1>
+            <h1 className={styles.header__headerTitle}>Header</h1>
             <div className={styles.header__avatarWrap}>
-                <img className={styles.header__avatar} src={UserAvatar} />
+                <img className={styles.header__avatar} src={UserAvatar}/>
             </div>
         </header>
     )

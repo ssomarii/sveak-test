@@ -2,29 +2,44 @@
 @use '../../constants/mixins';
 
 .header {
-    background-color: colors.$DESKTOP_BACKGROUND;
-    padding: 18px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: colors.$DESKTOP_BACKGROUND;
+  padding: 18px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 
-    &__avatarWrap {
-        height: 30px;
-        width: 30px;
-        overflow: hidden;
-        border-radius: 50%;
-    }
-
-    &__avatar {
-        height: 100%;
-        width: 100%;
-    }
+  &__headerTitle {
+    margin: 0;
 
     @include mixins.tablet {
-      background-color: colors.$TABLET_BACKGROUND;
+      margin: auto;
     }
 
     @include mixins.mobile {
-      background-color: colors.$MOBILE_BACKGROUND;
+      margin: auto;
     }
+  }
+
+  &__avatarWrap {
+    height: 30px;
+    width: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  &__avatar {
+    height: 100%;
+    width: 100%;
+  }
+
+  @include mixins.tablet {
+    background-color: colors.$TABLET_BACKGROUND;
+  }
+
+  @include mixins.mobile {
+    background-color: colors.$MOBILE_BACKGROUND;
+  }
 }

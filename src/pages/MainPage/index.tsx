@@ -7,6 +7,7 @@ import { CARDS_MOCK, MENU_ITEMS_MOCK } from '../../constants/mocks';
 import { hideRedundantCards } from '../../helpers/hideRedundantCards';
 import styles from './mainPage.module.scss';
 import { useEffect, useState } from 'react';
+import {BurgerButton} from "../../components/BurgerButon";
 
 export const MainPage = () => {
     const [isActiveMenu, setIsActiveMenu] = useState(false);
@@ -27,10 +28,11 @@ export const MainPage = () => {
     return(
         <div className={styles.mainPage}>
             <div className={styles.mainPage__container}>
+                <BurgerButton isActive={isActiveMenu} onClickButton={_onClickButtonMenu} />
                 <MenuAdaptive isActive={isActiveMenu} stylesWrap={styles.mainPage__menuAdaptiveWrapper} listItems={MENU_ITEMS_MOCK} />
                 <Menu listItems={MENU_ITEMS_MOCK} stylesWrap={styles.mainPage__menuWrapper} />
                 <div className={styles.mainPage__fullContent}>
-                    <Header isActiveMenu={isActiveMenu} onClickButtonMenu={_onClickButtonMenu} />
+                    <Header />
                     <main data-grid-container className={styles.mainPage__content}>
                         {CARDS_MOCK.map(item => <Card imageSmall={item.imageSmall} stylesWrap={styles.mainPage__contentItem} key={item.id} title={item.title} image={item.image} />)}
                     </main>
