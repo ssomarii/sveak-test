@@ -2,45 +2,52 @@
 @use './colors';
 
 @mixin laptop {
-    @media (max-width: (variables.$breakpoint-laptop)) {
-        @content;
-    }
+  @media (max-width: (variables.$breakpoint-laptop)) {
+    @content;
+  }
 }
 
 @mixin tablet {
-    @media (max-width: (variables.$breakpoint-tablet)) {
-        @content;
-    }
+  @media (max-width: (variables.$breakpoint-tablet)) {
+    @content;
+  }
 }
 
 @mixin small-tablet {
-    @media (max-width: (variables.$breakpoint-small-tablet)) {
-        @content;
-    }
+  @media (max-width: (variables.$breakpoint-small-tablet)) {
+    @content;
+  }
 }
 
 @mixin mobile {
-    @media (max-width: (variables.$breakpoint-mobile)) {
-        @content;
-    }
+  @media (max-width: (variables.$breakpoint-mobile)) {
+    @content;
+  }
 }
 
 @mixin small-mobile {
-    @media (max-width: (variables.$breakpoint-small-mobile)) {
-        @content;
-    }
+  @media (max-width: (variables.$breakpoint-small-mobile)) {
+    @content;
+  }
 }
 
 @mixin main-font-title($color: colors.$font-main-color) {
-    font-family: 'Roboto-Bold', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: $color;
+  font-family: 'Roboto-Bold', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: $color;
 }
 
 @mixin main-font-subtitle($color: colors.$font-main-color) {
-    font-family: 'Roboto-Medium', sans-serif;
-    font-weight: 500;
-    font-size: 12px;
-    color: $color;
+  font-family: 'Roboto-Medium', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: $color;
+}
+
+@mixin main-font-a-link($color: colors.$font-main-color) {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: $color;
 }

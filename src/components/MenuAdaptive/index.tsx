@@ -24,7 +24,7 @@ export const MenuAdaptive = ({stylesWrap = '', listItems = [], isActive = false}
     return(
         <nav className={clsx(styles.menuAdaptive, isActive && styles.menuAdaptive_active, stylesWrap)}>
             <div className={clsx(styles.menuAdaptive__menu, isActive && styles.menuAdaptive__menu_active)}>
-                {listItems.map(item => <MenuItem key={item.id} title={item.title} />)}
+                {listItems.map(item => <MenuItem key={item.id} link={item.link} title={item.title} />)}
             </div>
         </nav>
     )

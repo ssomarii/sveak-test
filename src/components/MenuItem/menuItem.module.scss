@@ -1,21 +1,22 @@
 @use '../../constants/colors.scss';
+@use '../../constants/mixins.scss';
 
 .menuItem {
-    padding: 9px 13px;
-    border-radius: 30px;
-    transition-property: background-color;
-    transition-duration: 0.3s;
-    background-color: transparent;
-    gap: 14px;
-    display: flex;
-    align-items: center;
-    
-    &:hover {
-        background-color: rgba(colors.$DESKTOP_HOVER, 0.15);
-        cursor: pointer;
-    }
+  padding: 9px 13px;
+  border-radius: 30px;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  background-color: transparent;
+  gap: 14px;
+  display: flex;
+  align-items: center;
 
-    &__title {
-        color: black;
-    }
+  &:hover {
+    background-color: rgba(colors.$DESKTOP_HOVER, 0.15);
+    cursor: pointer;
+  }
+
+  &__title {
+    @include mixins.main-font-a-link;
+  }
 }
