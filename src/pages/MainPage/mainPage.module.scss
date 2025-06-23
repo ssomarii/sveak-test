@@ -15,6 +15,15 @@
     display: flex;
     flex: 1 0 auto;
     background-color: colors.$DESKTOP_BACKGROUND;
+    height: 50vh;
+
+    @include mixins.tablet {
+      height: auto;
+    }
+
+    @include mixins.mobile {
+      height: auto;
+    }
   }
 
   &__content {
@@ -50,15 +59,5 @@
     //Выделение цветом элементов незаконченной строки для наглядности
     box-shadow: 0 0 0 .33rem var(--colorProp);
     //display: var(--colorProp);
-  }
-
-  &__menuWrapper {
-    @include mixins.tablet {
-      display: none;
-    }
-
-    @include mixins.mobile {
-      display: none;
-    }
   }
 }

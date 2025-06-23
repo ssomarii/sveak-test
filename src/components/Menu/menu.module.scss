@@ -10,6 +10,11 @@
   padding: 39px 26px 29px 36px;
   border-right: 1px gray solid;
 
+  &__menu {
+    overflow-y: auto;
+    flex-grow: 1;
+  }
+
   @include mixins.tablet {
     padding: 0;
     position: fixed;

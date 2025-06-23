@@ -29,3 +29,32 @@ a {
     font-size: 16px;
     text-decoration: none;
 }
+
+/* Chrome, Safari, Edge */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    margin: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+    border-radius: 5px;
+    margin: 6px 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #593a9e;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #392367;
+}
+
+/*Вариант для Firefox*/
+/*html {*/
+/*    scrollbar-width: thin;*/
+/*    scrollbar-color: #593a9e white;*/
+/*}*/
