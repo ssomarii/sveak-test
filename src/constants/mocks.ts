@@ -1,4 +1,4 @@
-import type { TMenuItem, TCardItem } from "../types";
+import type {TMenuItem, TCardItem} from "../types";
 import Cat1 from '../assets/images/1.jpg';
 import Cat2 from '../assets/images/2.jpg';
 import Cat3 from '../assets/images/3.jpg';
@@ -35,7 +35,7 @@ export const CARDS_MOCK: TCardItem[] = [
         title: 'Card 4',
         image: Cat4,
     },
-        {
+    {
         id: 5,
         title: 'Card 5',
         image: Cat5,
@@ -55,7 +55,7 @@ export const CARDS_MOCK: TCardItem[] = [
         title: 'Card 8',
         image: Cat8,
     },
-            {
+    {
         id: 9,
         title: 'Card 9',
         image: Cat9,
@@ -75,7 +75,7 @@ export const CARDS_MOCK: TCardItem[] = [
         title: 'Card 12',
         image: Cat12,
     },
-        {
+    {
         id: 13,
         title: 'Card 13',
         image: Cat13,
@@ -91,21 +91,81 @@ export const MENU_ITEMS_MOCK: TMenuItem[] = [
     {
         id: 1,
         title: '1 пункт меню',
+        link: '/',
     },
     {
         id: 2,
         title: '2 пункт меню с длинным названием',
+        link: '/',
     },
     {
         id: 3,
         title: '3 пункт меню',
+        link: '/',
     },
     {
         id: 4,
         title: '4 пункт меню',
+        link: '/',
     },
     {
         id: 5,
         title: '5 пункт меню',
+        link: '/',
     },
+    {
+        id: 6,
+        title: '6 пункт меню',
+        link: '/',
+    },
+    {
+        id: 7,
+        title: '7 пункт меню',
+        link: '/',
+    },
+    {
+        id: 8,
+        title: '8 пункт меню',
+        link: '/',
+    },
+    {
+        id: 9,
+        title: '9 пункт меню',
+        link: '/',
+    },
+    {
+        id: 10,
+        title: '10 пункт меню',
+        link: '/',
+    },
+    // {
+    //     id: 11,
+    //     title: '11 пункт меню',
+    //     link: '/',
+    // },
+    // {
+    //     id: 12,
+    //     title: '12 пункт меню',
+    //     link: '/',
+    // },
+    // {
+    //     id: 13,
+    //     title: '13 пункт меню',
+    //     link: '/',
+    // },
+    // {
+    //     id: 14,
+    //     title: '14 пункт меню',
+    //     link: '/',
+    // },
+    // {
+    //     id: 15,
+    //     title: '15 пункт меню',
+    //     link: '/',
+    // },
+    // {
+    //     id: 16,
+    //     title: '16 пункт меню',
+    //     link: '/',
+    // },
 ]

@@ -1,5 +1,5 @@
-import type { TMenuItem } from '../../types';
-import { MenuItem } from '../MenuItem';
+import type {TMenuItem} from '../../types';
+import {MenuItem} from '../MenuItem';
 import styles from './menu.module.scss';
 
 interface IProps {
@@ -8,9 +8,9 @@ interface IProps {
 }
 
 export const Menu = ({stylesWrap = '', listItems = []}: IProps) => {
-    return(
+    return (
         <nav className={`${styles.menu} ${stylesWrap}`}>
-            {listItems.map(item => <MenuItem key={item.id} title={item.title} />)}
+            {listItems.map(item => <MenuItem key={item.id} link={item.link} title={item.title}/>)}
         </nav>
     )
 }
