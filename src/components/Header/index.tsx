@@ -1,5 +1,5 @@
 import styles from './header.module.scss';
-import UserAvatar from '../../assets/images/userImage.jpg';
+import UserAvatar from '../../assets/images/userImage.png';
 import { BurgerButton } from '../BurgerButon';
 
 interface IProps {

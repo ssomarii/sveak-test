@@ -16,14 +16,14 @@ export const MainPage = () => {
     }
 
     useEffect(() => {
-        hideRedundantCards(CARDS_MOCK); 
+        hideRedundantCards(CARDS_MOCK);
         window.addEventListener('resize', () => hideRedundantCards(CARDS_MOCK));
-        
+
         return () => {
             window.removeEventListener('resize', () => hideRedundantCards(CARDS_MOCK));
         };
     }, []);
-    
+
     return(
         <div className={styles.mainPage}>
             <div className={styles.mainPage__container}>
@@ -32,7 +32,7 @@ export const MainPage = () => {
                 <div className={styles.mainPage__fullContent}>
                     <Header isActiveMenu={isActiveMenu} onClickButtonMenu={_onClickButtonMenu} />
                     <main data-grid-container className={styles.mainPage__content}>
-                        {CARDS_MOCK.map(item => <Card stylesWrap={styles.mainPage__contentItem} key={item.id} title={item.title} image={item.image} />)}
+                        {CARDS_MOCK.map(item => <Card imageSmall={item.imageSmall} stylesWrap={styles.mainPage__contentItem} key={item.id} title={item.title} image={item.image} />)}
                     </main>
                 </div>
             </div>

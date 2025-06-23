@@ -8,4 +8,5 @@ export type TCardItem = {
     id: number;
     title: string;
     image: string;
+    imageSmall: string;
 }
