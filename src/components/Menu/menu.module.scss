@@ -1,6 +1,9 @@
 @use '../../constants/colors';
 @use '../../constants/mixins';
 
+$transformValue: transform 0.3s ease-in-out;
+$visibilityValue: visibility 0.3s ease-in-out;
+
 .menu {
   width: 310px;
   display: flex;
@@ -24,7 +27,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     visibility: hidden;
-    transition: visibility 0.3s ease-in-out;
+    transition: $visibilityValue;
     z-index: 90;
 
     &__menu {
@@ -35,18 +38,18 @@
       height: 100%;
       padding: 60px 20px 20px;
       transform: translate(-100%);
-      transition: transform 0.3s ease-in-out;
+      transition: $transformValue;
 
       &_active {
         @include mixins.tablet {
           transform: translate(0);
-          transition: transform 0.3s ease-in-out;
+          transition: $transformValue;
         }
 
         @include mixins.mobile {
           width: auto;
           transform: translate(0);
-          transition: transform 0.3s ease-in-out;
+          transition: $transformValue;
         }
       }
     }
@@ -54,12 +57,12 @@
     &_active {
       @include mixins.tablet {
         visibility: visible;
-        transition: visibility 0.3s ease-in-out;
+        transition: $visibilityValue;
       }
 
       @include mixins.mobile {
         visibility: visible;
-        transition: visibility 0.3s ease-in-out;
+        transition: $visibilityValue;
       }
     }
   }
